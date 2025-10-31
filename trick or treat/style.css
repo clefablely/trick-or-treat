@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "spookyfont";
+  src: url("spooky.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "totfont";
+  src: url("tot.ttf") format("truetype");
+}
+
+body {
+  background-color: #1a0f0f;
+  color: #ffdead;
+  font-family: "papyrus", cursive;
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+    font-family: "spookyfont", cursive;
+  color: #ffb347;
+  text-shadow: 2px 2px 5px #000;
+}
+
+#village {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  gap: 2rem;
+}
+
+.house {
+  background: #3a1e1e;
+  border: 3px solid #ffdead;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.house:hover {
+  background: #552b2b;
+  transform: scale(1.05);
+}
+
+.door {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.2s ease;
+}
+
+.house:hover .door {
+  transform: scale(1.1);
+}
+
+
+#message {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color: #fddbb0;
+  min-height: 2rem;
+}
+
+#stats {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #ffb347;
+}
+
+.flash {
+  animation: flash 0.3s ease;
+}
+
+@keyframes flash {
+  0% { background: #ffdead; color: #1a0f0f; }
+  100% { background: #3a1e1e; color: #ffdead; }
+}
+
+#pumpkin-logo {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  filter: drop-shadow(0 0 10px orange);
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+#pumpkin-logo {
+  animation: floaty 3s ease-in-out infinite;
+}
+
+#message {
+  font-family: "totfont";
+  font-size: 1.0rem;
+  color: #fddbb0;
+  min-height: 2rem;
+}
+
+@keyframes zoomAbrupt {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  100% { transform: translate(-50%, -50%) scale(1.5); }
+}
+
+#trick-image.zoom {
+  animation: zoomAbrupt 1s forwards;
+}
+
