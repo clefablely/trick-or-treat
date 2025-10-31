@@ -67,7 +67,7 @@ houses.forEach(house => {
     message.classList.add("treat-font");
 
     // 5% chance of rare video treat
-    if (Math.random() < 0.1) {
+    if (Math.random() < 0.15) {
         message.textContent = `you knocked on ${house.querySelector('p').textContent}.. a super rare treat from a super hot homeowner! 🐰`;
 
         // show and play video
